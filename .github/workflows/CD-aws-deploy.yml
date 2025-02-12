@@ -4,7 +4,8 @@ on:
   workflow_run:
     workflows: ["CI-build-and-push-image-to-dockerhub"]  
     types:
-      - completed  # Runs after the previous workflow completes
+      # Runs after the previous workflow completes
+      - completed  
 
 jobs:
   deploy:
