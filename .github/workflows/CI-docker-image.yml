@@ -4,13 +4,13 @@ name: CI-build-and-push-image-to-dockerhub
 on:
 # Triggers the workflow on the push or pull request events but only for the master branch
   push:
-    branches: [ "master" ]
+    branches: [ "feat/docker" ]
     paths-ignore:
       - README.md
       - .vscode/**
       - .gitignore
   pull_request:
-    branches: [ "master" ]
+    branches: [ "feat/docker" ]
     paths-ignore:
       - README.md
       - .vscode/**
