@@ -45,4 +45,4 @@ jobs:
           context: .
           file: ./apps/client/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/invent3pro:latest, ${{ secrets.DOCKERHUB_USERNAME }}/invent3pro:${{ github.run_number }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/invent3-ui:latest, ${{ secrets.DOCKERHUB_USERNAME }}/invent3-ui:${{ github.run_number }}
