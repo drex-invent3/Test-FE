@@ -22,9 +22,9 @@ jobs:
       - name: Deploy to AWS
         run: |
           ssh ubuntu@${{ secrets.AWS_HOST }} << 'EOF'
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/invent3pro:latest
-            docker stop invent3pro-container || true
-            docker rm invent3pro-container || true
-            docker run -d --name invent3pro-container -p 80:3000 \
+            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/invent3pro:latest
+            sudo docker stop invent3pro-container || true
+            sudo docker rm invent3pro-container || true
+            sudo docker run -d --name invent3pro-container -p 80:3000 \
               ${{ secrets.DOCKERHUB_USERNAME }}/invent3pro:latest
           EOF
